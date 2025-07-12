@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trombinoscope MIA-BF</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f4f6f8; 
+            padding: 20px; 
+            margin: 0;
+            line-height: 1.6;
+        }
+        h1, h2 { 
+            text-align: center; 
+            color: #2c3e50;
+        }
+        .section { 
+            margin-bottom: 40px; 
+        }
+        .grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            width: 250px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 4px solid;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            background: #ddd;
+            loading: lazy;
+        }
+        .card h3 { 
+            margin: 10px 0 5px; 
+            font-size: 1.1em; 
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        .card p { 
+            margin: 4px 0; 
+            color: #5a6c7d;
+            font-size: 0.9em;
+        }
+        .card a { 
+            color: #007BFF; 
+            text-decoration: none; 
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+        .card a:focus {
+            outline: 2px solid #007BFF;
+            outline-offset: 2px;
+        }
+        
+        /* Amélioration des contrastes pour l'accessibilité */
+        .card[style*="border-color:#28a745"] h3 { color: #1e7e34; }
+        .card[style*="border-color:#ffc107"] h3 { color: #856404; }
+        .card[style*="border-color:#17a2b8"] h3 { color: #117a8b; }
+        .card[style*="border-color:#6f42c1"] h3 { color: #59359a; }
+        .card[style*="border-color:#dc3545"] h3 { color: #bd2130; }
+        .card[style*="border-color:#20c997"] h3 { color: #1a9d6f; }
+        .card[style*="border-color:#fd7e14"] h3 { color: #dc6502; }
+        .card[style*="border-color:#6610f2"] h3 { color: #520dc2; }
+        .card[style*="border-color:#A0522D"] h3 { color: #8b4513; }
+        .card[style*="border-color:#6c757d"] h3 { color: #495057; }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                max-width: 300px;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+        
+        /* Focus visible pour l'accessibilité */
+        .card:focus-within {
+            outline: 2px solid #007BFF;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="section" style="margin-top: 0;">
+            <div class="grid" style="justify-content: center;">
+                <div class="card" style="border-color:#00008B;">
+                    <img src="https://oxygenemag.info/wp-content/uploads/2023/06/IZ0-1296x700.jpg" alt="Portrait d'Izouma Sidibé, Administrateur général de MIA-BF" loading="lazy">
+                    <h3>Izouma Sidibé</h3>
+                    <p>Administrateur général</p>
+                </div>
+            </div>
+        </div>
+        <h1>Trombinoscope MIA-BF</h1>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>Administration Générale</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#007BFF;">
+                    <img src="img_Charlote.jpg" alt="Portrait de Charlotte Lompo, Administratrice générale adjointe" loading="lazy">
+                    <h3>Charlotte Lompo</h3>
+                    <p>Administratrice générale adjointe</p>
+                </div>
+                <div class="card" style="border-color:#007BFF;">
+                    <img src="https://cdn-s-www.estrepublicain.fr/images/987FFEF7-476C-4069-B07D-051F022CE6F3/NW_raw/olivier-lompo-maitre-de-conference-en-informatique-sera-a-pontarlier-ce-jeudi-20-juin-afin-de-mieux-comprendre-l-intelligence-artificielle-photo-dr-1718821365.jpg" alt="Portrait du Dr. Olivier Lompo, Directeur scientifique" loading="lazy">
+                    <h3>Dr. Olivier Lompo</h3>
+                    <p>Directeur scientifique</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Recherche & Développement</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#28a745;">
+                    <img src="https://burkina24.com/wp-content/uploads/2024/10/20241014_171218-1024x577.jpg" alt="Portrait du Dr. Rodrigue Kafando, Délégué en charge de R&D" loading="lazy">
+                    <h3>Dr. Rodrigue Kafando</h3>
+                    <p>Délégué en charge de R&D</p>
+                </div>
+                <div class="card" style="border-color:#28a745;">
+                    <img src="https://th.bing.com/th/id/OIP.6ne013CuwJlBKg0UvX24RQHaIX?rs=1&pid=ImgDetMain" alt="Portrait du Dr. P. Nicolas Sawadogo, Délégué Adjoint en charge de R&D" loading="lazy">
+                    <h3>Dr. P. Nicolas Sawadogo</h3>
+                    <p>Délégué Adjoint en charge de R&D</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Relations Publiques</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#ffc107;">
+                    <img src="https://cfpem-sst.com/wp-content/uploads/2021/07/WhatsApp-Image-2021-07-31-at-11.38.37-AM.jpeg" alt="Portrait de Laya Ibrahim Ouédraogo, Délégué en charge des RP" loading="lazy">
+                    <h3>Laya Ibrahim Ouédraogo</h3>
+                    <p>Délégué en charge des RP</p>
+                </div>
+                <div class="card" style="border-color:#ffc107;">
+                    <img src="img_Delphine_Sana.jpg" alt="Portrait de Delphine Faozia Sana, Déléguée adjointe en charge des RP" loading="lazy">
+                    <h3>Delphine Faozia Sana</h3>
+                    <p>Déléguée adjointe en charge des RP</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Santé Numérique</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#17a2b8;">
+                    <img src="https://burkina24.com/wp-content/uploads/2022/07/Constant-Dahourou-Directeur-general-DG-du-CHU-YO.-scaled.jpg" alt="Portrait du MBA. Dahourou Constant, Délégué en charge Santé numérique" loading="lazy">
+                    <h3>MBA. Dahourou Constant</h3>
+                    <p>Délégué en charge Santé numérique</p>
+                </div>
+                <div class="card" style="border-color:#17a2b8;">
+                    <img src="img_Coulidjaty.jpg" alt="Portrait de Flavien Coulidiaty, Délégué Adjoint en charge Santé numérique" loading="lazy">
+                    <h3>Flavien Coulidiaty</h3>
+                    <p>Délégué Adjoint en charge Santé numérique</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Partenariats</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#6f42c1;">
+                    <img src="https://lefaso.net/IMG/jpg/whatsapp_image_2022-03-30_at_14.39.29.jpg" alt="Portrait de Limaba Lompo, Délégué en charge du partenariat" loading="lazy">
+                    <h3>Limaba Lompo</h3>
+                    <p>Délégué en charge du partenariat</p>
+                </div>
+                <div class="card" style="border-color:#6f42c1;">
+                    <img src="https://jeunesdufaso.net/IMG/jpg/whatsapp_image_2024-07-17_at_13.17_39.jpg?1721223674" alt="Portrait de Faridatou Rouamba, Déléguée Adjointe en charge du partenariat" loading="lazy">
+                    <h3>Faridatou Rouamba</h3>
+                    <p>Déléguée Adjointe en charge du partenariat</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Fintech</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#dc3545;">
+                    <img src="https://media.licdn.com/dms/image/v2/C5603AQFNnXR3fqnn2g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516495721674?e=2147483647&v=beta&t=pf4wZHYliTb-uEjcEFkhz9QstIpc6PNAVwO2ye2AHcQ" alt="Portrait du Phd. François Dapelgo, Délégué en charge Fintech" loading="lazy">
+                    <h3>Phd. François Dapelgo</h3>
+                    <p>Délégué en charge Fintech</p>
+                </div>
+                <div class="card" style="border-color:#dc3545;">
+                    <img src="img_Faissal.jpg" alt="Portrait du Phd. Faissal Tientoré, Délégué Adjoint en charge Fintech" loading="lazy">
+                    <h3>Phd. Faissal Tientoré</h3>
+                    <p>Délégué Adjoint en charge Fintech</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Éducation & Environnement</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#20c997;">
+                    <img src="img_Evariste.jpg" alt="Portrait du Dr. Évariste Thiombiano, Délégué en charge Éducation & Environnement" loading="lazy">
+                    <h3>Dr. Évariste Thiombiano</h3>
+                    <p>Délégué en charge Éducation & Environnement</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Administration & Finances</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#fd7e14;">
+                    <img src="https://i.ytimg.com/vi/uWMRyGYlVwE/maxresdefault.jpg" alt="Portrait de François Lompo, Délégué en charge de l'administration et des finances" loading="lazy">
+                    <h3>François Lompo</h3>
+                    <p>Délégué en charge de l'administration, des finances</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Expertises IA</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#6610f2;">
+                    <img src="img_Ismael_Ouiya.jpg" alt="Portrait d'Ismaël Ouiya, Délégué en charge des expertises IA" loading="lazy">
+                    <h3>Ismaël Ouiya</h3>
+                    <p>Délégué en charge des expertises IA</p>
+                </div>
+                <div class="card" style="border-color:#6610f2;">
+                    <img src="img_Sidibé.jpg" alt="Portrait du Phd. Abdoul Kader Sidibé, Délégué en charge des expertises IA" loading="lazy">
+                    <h3>Phd. Abdoul Kader Sidibé</h3>
+                    <p>Délégué en charge des expertises IA</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Droit & Éthique Numérique</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#A0522D;">
+                    <img src="img_Tankoano.jpg" alt="Portrait du Dr. Tankoano Gnoari, Délégué en charge du droit et de l'éthique numérique" loading="lazy">
+                    <h3>Dr. Tankoano Gnoari</h3>
+                    <p>Délégué en charge du droit et de l'éthique numérique</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Sécurité & Cyberdéfense</h2>
+            <div class="grid">
+                <div class="card" style="border-color:#6c757d;">
+                    <img src="https://via.placeholder.com/100" alt="Portrait du Dr. Olivier Lompo (ESC), Délégué en charge sécurité & Cyberdéfense" loading="lazy">
+                    <h3>Dr. Olivier Lompo (ESC)</h3>
+                    <p>Délégué en charge sécurité & Cyberdéfense</p>
+                </div>
+                <div class="card" style="border-color:#6c757d;">
+                    <img src="https://via.placeholder.com/100" alt="Portrait du Commandant Koanda (DGSSIC), Co-responsable Cyberdéfense" loading="lazy">
+                    <h3>Commandant Koanda (DGSSIC)</h3>
+                    <p>Co-responsable Cyberdéfense</p>
+                </div>
+                <div class="card" style="border-color:#6c757d;">
+                    <img src="https://via.placeholder.com/100" alt="Portrait du Commandant Yoni (BCLCC), Co-responsable Cyberdéfense" loading="lazy">
+                    <h3>Commandant Yoni (BCLCC)</h3>
+                    <p>Co-responsable Cyberdéfense</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
